@@ -22,8 +22,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#0d0d14",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "var(--bg-primary)",
+        borderTop: "1px solid var(--border)",
         marginTop: "auto",
       }}
     >
@@ -97,8 +97,8 @@ export default function Footer() {
                   style={{
                     width: "36px",
                     height: "36px",
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--border)",
                     borderRadius: "10px",
                     display: "flex",
                     alignItems: "center",
@@ -115,9 +115,9 @@ export default function Footer() {
                   }}
                   onMouseLeave={(e) => {
                     const el = e.currentTarget as HTMLElement;
-                    el.style.background = "rgba(255,255,255,0.05)";
-                    el.style.color = "#606078";
-                    el.style.borderColor = "rgba(255,255,255,0.08)";
+                    el.style.background = "var(--bg-card)";
+                    el.style.color = "var(--text-muted)";
+                    el.style.borderColor = "var(--border)";
                   }}
                 >
                   <Icon size={16} />
@@ -148,15 +148,15 @@ export default function Footer() {
                       href="#"
                       style={{
                         fontSize: "14px",
-                        color: "#606078",
+                        color: "var(--text-muted)",
                         textDecoration: "none",
                         transition: "color 0.2s",
                       }}
                       onMouseEnter={(e) =>
-                        ((e.target as HTMLElement).style.color = "#a0a0b8")
+                        ((e.target as HTMLElement).style.color = "var(--text-secondary)")
                       }
                       onMouseLeave={(e) =>
-                        ((e.target as HTMLElement).style.color = "#606078")
+                        ((e.target as HTMLElement).style.color = "var(--text-muted)")
                       }
                     >
                       {link}
@@ -171,7 +171,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
+            borderTop: "1px solid var(--border)",
             paddingTop: "24px",
             display: "flex",
             alignItems: "center",
@@ -180,7 +180,7 @@ export default function Footer() {
             gap: "12px",
           }}
         >
-          <p style={{ fontSize: "13px", color: "#606078" }}>
+          <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>
             © {new Date().getFullYear()} Shozada. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "20px" }}>
@@ -195,10 +195,10 @@ export default function Footer() {
                   transition: "color 0.2s",
                 }}
                 onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = "#a0a0b8")
+                  ((e.target as HTMLElement).style.color = "var(--text-secondary)")
                 }
                 onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = "#606078")
+                  ((e.target as HTMLElement).style.color = "var(--text-muted)")
                 }
               >
                 {item}

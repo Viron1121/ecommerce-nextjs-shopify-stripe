@@ -18,6 +18,7 @@ export default async function FeaturedProducts() {
 
   return (
     <section
+      id="featured"
       style={{
         maxWidth: "1280px",
         margin: "0 auto",
@@ -56,7 +57,7 @@ export default async function FeaturedProducts() {
             style={{
               fontSize: "clamp(28px, 4vw, 42px)",
               fontWeight: 800,
-              color: "#f0f0ff",
+              color: "var(--text-primary)",
               letterSpacing: "-0.03em",
               lineHeight: 1.15,
             }}
@@ -73,7 +74,7 @@ export default async function FeaturedProducts() {
               Collection
             </span>
           </h2>
-          <p style={{ color: "#606078", fontSize: "14px" }}>
+          <p style={{ color: "var(--text-muted)", fontSize: "14px" }}>
             {products.length} products available
           </p>
         </div>
@@ -91,8 +92,8 @@ export default async function FeaturedProducts() {
           <div
             key={product.id}
             style={{
-              background: "#16161f",
-              border: "1px solid rgba(255,255,255,0.07)",
+              background: "var(--bg-card)",
+              border: "1px solid var(--border)",
               borderRadius: "24px",
               overflow: "hidden",
               transition: "transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease",
@@ -105,7 +106,7 @@ export default async function FeaturedProducts() {
               style={{
                 position: "relative",
                 height: "300px",
-                background: "linear-gradient(135deg, #1a1a28 0%, #0f0f1a 100%)",
+                background: "linear-gradient(135deg, var(--bg-card-hover) 0%, var(--bg-primary) 100%)",
                 overflow: "hidden",
               }}
             >
@@ -139,14 +140,14 @@ export default async function FeaturedProducts() {
                   position: "absolute",
                   top: "14px",
                   left: "14px",
-                  background: "rgba(10,10,15,0.75)",
+                  background: "var(--glass)",
                   backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  border: "1px solid var(--border)",
                   borderRadius: "20px",
                   padding: "4px 12px",
                   fontSize: "11px",
                   fontWeight: 600,
-                  color: "#a0a0b8",
+                  color: "var(--text-secondary)",
                   letterSpacing: "0.05em",
                   textTransform: "uppercase",
                 }}
@@ -169,7 +170,7 @@ export default async function FeaturedProducts() {
                     key={i}
                     size={11}
                     fill={i < 4 ? "#f59e0b" : "transparent"}
-                    color={i < 4 ? "#f59e0b" : "#606078"}
+                    color={i < 4 ? "#f59e0b" : "var(--text-muted)"}
                   />
                 ))}
               </div>
@@ -181,7 +182,7 @@ export default async function FeaturedProducts() {
                 style={{
                   fontSize: "17px",
                   fontWeight: 700,
-                  color: "#f0f0ff",
+                  color: "var(--text-primary)",
                   marginBottom: "6px",
                   letterSpacing: "-0.02em",
                   overflow: "hidden",
@@ -212,7 +213,7 @@ export default async function FeaturedProducts() {
                 >
                   {product.currency} {parseFloat(product.price).toFixed(2)}
                 </span>
-                <span style={{ fontSize: "12px", color: "#606078" }}>
+                <span style={{ fontSize: "12px", color: "var(--text-muted)" }}>
                   Free shipping
                 </span>
               </div>

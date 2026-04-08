@@ -37,15 +37,14 @@ export default async function ProductPage({
     <section
       style={{
         minHeight: "100vh",
-        background:
-          "radial-gradient(ellipse 60% 40% at 70% 20%, rgba(124,92,252,0.1) 0%, transparent 60%), #0a0a0f",
+        background: "radial-gradient(ellipse 60% 40% at 70% 20%, var(--accent-light) 0%, transparent 60%), var(--bg-primary)",
         padding: "60px 24px 100px",
       }}
     >
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         {/* Breadcrumb */}
         <nav style={{ marginBottom: "36px" }}>
-          <span style={{ color: "#606078", fontSize: "13px" }}>
+          <span style={{ color: "var(--text-muted)", fontSize: "13px" }}>
             <a href="/" style={{ color: "#7c5cfc", textDecoration: "none" }}>
               Home
             </a>{" "}
@@ -75,8 +74,8 @@ export default async function ProductPage({
                 height: "580px",
                 borderRadius: "28px",
                 overflow: "hidden",
-                background: "linear-gradient(135deg, #1a1a28 0%, #0f0f1a 100%)",
-                border: "1px solid rgba(124,92,252,0.15)",
+                background: "linear-gradient(135deg, var(--bg-card-hover) 0%, var(--bg-primary) 100%)",
+                border: "1px solid var(--border)",
                 boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
               }}
             >
@@ -95,7 +94,7 @@ export default async function ProductPage({
                   position: "absolute",
                   inset: 0,
                   background:
-                    "linear-gradient(180deg, transparent 60%, rgba(10,10,15,0.5) 100%)",
+                    "linear-gradient(180deg, transparent 60%, var(--bg-primary) 100%)",
                   pointerEvents: "none",
                 }}
               />
@@ -105,14 +104,14 @@ export default async function ProductPage({
                   position: "absolute",
                   top: "18px",
                   left: "18px",
-                  background: "rgba(10,10,15,0.75)",
+                  background: "var(--glass)",
                   backdropFilter: "blur(12px)",
-                  border: "1px solid rgba(255,255,255,0.12)",
+                  border: "1px solid var(--border)",
                   borderRadius: "20px",
                   padding: "6px 14px",
                   fontSize: "12px",
                   fontWeight: 600,
-                  color: "#a0a0b8",
+                  color: "var(--text-secondary)",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                 }}
@@ -150,11 +149,11 @@ export default async function ProductPage({
                     key={i}
                     size={14}
                     fill={i < 4 ? "#f59e0b" : "transparent"}
-                    color={i < 4 ? "#f59e0b" : "#606078"}
+                    color={i < 4 ? "#f59e0b" : "var(--text-muted)"}
                   />
                 ))}
                 <span
-                  style={{ fontSize: "13px", color: "#606078", marginLeft: "6px" }}
+                  style={{ fontSize: "13px", color: "var(--text-muted)", marginLeft: "6px" }}
                 >
                   (128 reviews)
                 </span>
@@ -166,7 +165,7 @@ export default async function ProductPage({
               style={{
                 fontSize: "clamp(28px, 4vw, 42px)",
                 fontWeight: 900,
-                color: "#f0f0ff",
+                color: "var(--text-primary)",
                 letterSpacing: "-0.04em",
                 lineHeight: 1.1,
                 marginBottom: "20px",
@@ -194,7 +193,7 @@ export default async function ProductPage({
                   display: "block",
                   marginTop: "4px",
                   fontSize: "13px",
-                  color: "#606078",
+                  color: "var(--text-muted)",
                 }}
               >
                 Tax included
@@ -205,7 +204,7 @@ export default async function ProductPage({
             <div
               style={{
                 height: "1px",
-                background: "rgba(255,255,255,0.07)",
+                background: "var(--border)",
                 marginBottom: "28px",
               }}
             />
@@ -223,7 +222,7 @@ export default async function ProductPage({
                   style={{
                     fontSize: "14px",
                     fontWeight: 600,
-                    color: "#f0f0ff",
+                    color: "var(--text-primary)",
                   }}
                 >
                   Select Size
@@ -254,13 +253,13 @@ export default async function ProductPage({
                     key={size}
                     data-size={size}
                     style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.1)",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--border)",
                       borderRadius: "10px",
                       padding: "10px 16px",
                       fontSize: "13px",
                       fontWeight: 600,
-                      color: "#a0a0b8",
+                      color: "var(--text-secondary)",
                       cursor: "pointer",
                       transition: "all 0.15s",
                     }}
@@ -291,7 +290,7 @@ export default async function ProductPage({
                     display: "flex",
                     alignItems: "center",
                     gap: "10px",
-                    color: "#a0a0b8",
+                    color: "var(--text-secondary)",
                     fontSize: "13px",
                   }}
                 >

@@ -64,16 +64,16 @@ export default function AddToCartButton({
               background:
                 selectedSize === size
                   ? "rgba(124,92,252,0.2)"
-                  : "rgba(255,255,255,0.04)",
+                  : "var(--bg-card)",
               border:
                 selectedSize === size
                   ? "1px solid rgba(124,92,252,0.6)"
-                  : "1px solid rgba(255,255,255,0.1)",
+                  : "1px solid var(--border)",
               borderRadius: "10px",
               padding: "10px 16px",
               fontSize: "13px",
               fontWeight: 600,
-              color: selectedSize === size ? "#7c5cfc" : "#a0a0b8",
+              color: selectedSize === size ? "#7c5cfc" : "var(--text-secondary)",
               cursor: "pointer",
               transition: "all 0.15s",
             }}

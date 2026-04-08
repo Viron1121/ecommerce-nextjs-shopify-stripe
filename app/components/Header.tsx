@@ -5,6 +5,7 @@ import { ShoppingBag, Search, Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "./CartProvider";
 import CartDrawer from "./CartDrawer";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -25,10 +26,10 @@ export default function Header() {
           position: "sticky",
           top: 0,
           zIndex: 100,
-          background: "rgba(10,10,15,0.85)",
+          background: "var(--glass)",
           backdropFilter: "blur(24px)",
           WebkitBackdropFilter: "blur(24px)",
-          borderBottom: "1px solid rgba(255,255,255,0.07)",
+          borderBottom: "1px solid var(--border)",
         }}
       >
         <div
@@ -63,7 +64,7 @@ export default function Header() {
                   fontSize: "22px",
                   fontWeight: 800,
                   letterSpacing: "-0.5px",
-                  color: "#f0f0ff",
+                  color: "var(--text-primary)",
                 }}
               >
                 Shozada
@@ -80,16 +81,16 @@ export default function Header() {
                 style={{
                   fontSize: "14px",
                   fontWeight: 500,
-                  color: "#a0a0b8",
+                  color: "var(--text-secondary)",
                   textDecoration: "none",
                   transition: "color 0.2s",
                   letterSpacing: "0.01em",
                 }}
                 onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = "#f0f0ff")
+                  ((e.target as HTMLElement).style.color = "var(--text-primary)")
                 }
                 onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = "#a0a0b8")
+                  ((e.target as HTMLElement).style.color = "var(--text-secondary)")
                 }
               >
                 {link.label}
@@ -99,21 +100,23 @@ export default function Header() {
 
           {/* Actions */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+            <ThemeToggle />
+
             <button
               style={{
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                color: "#a0a0b8",
+                color: "var(--text-secondary)",
                 display: "flex",
                 alignItems: "center",
                 transition: "color 0.2s",
               }}
               onMouseEnter={(e) =>
-                ((e.currentTarget.style.color = "#f0f0ff"))
+                ((e.currentTarget.style.color = "var(--text-primary)"))
               }
               onMouseLeave={(e) =>
-                ((e.currentTarget.style.color = "#a0a0b8"))
+                ((e.currentTarget.style.color = "var(--text-secondary)"))
               }
             >
               <Search size={20} />
@@ -128,16 +131,16 @@ export default function Header() {
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                color: "#a0a0b8",
+                color: "var(--text-secondary)",
                 display: "flex",
                 alignItems: "center",
                 transition: "color 0.2s",
               }}
               onMouseEnter={(e) =>
-                ((e.currentTarget.style.color = "#f0f0ff"))
+                ((e.currentTarget.style.color = "var(--text-primary)"))
               }
               onMouseLeave={(e) =>
-                ((e.currentTarget.style.color = "#a0a0b8"))
+                ((e.currentTarget.style.color = "var(--text-secondary)"))
               }
             >
               <ShoppingBag size={20} />
@@ -173,7 +176,7 @@ export default function Header() {
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                color: "#a0a0b8",
+                color: "var(--text-secondary)",
                 display: "none",
               }}
             >
@@ -186,8 +189,8 @@ export default function Header() {
         {mobileOpen && (
           <div
             style={{
-              background: "rgba(10,10,15,0.97)",
-              borderTop: "1px solid rgba(255,255,255,0.07)",
+              background: "var(--bg-primary)",
+              borderTop: "1px solid var(--border)",
               padding: "16px 24px 24px",
             }}
             className="mobile-nav"
@@ -201,9 +204,9 @@ export default function Header() {
                   padding: "12px 0",
                   fontSize: "16px",
                   fontWeight: 500,
-                  color: "#a0a0b8",
+                  color: "var(--text-secondary)",
                   textDecoration: "none",
-                  borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  borderBottom: "1px solid var(--border)",
                 }}
                 onClick={() => setMobileOpen(false)}
               >

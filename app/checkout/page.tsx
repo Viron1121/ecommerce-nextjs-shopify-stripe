@@ -26,7 +26,7 @@ const ELEMENT_OPTIONS = {
   style: {
     base: {
       fontSize: "15px",
-      color: "#f0f0ff",
+      color: "var(--text-primary)",
       fontFamily: "'Inter', sans-serif",
       "::placeholder": { color: "#606078" },
       backgroundColor: "transparent",
@@ -49,8 +49,8 @@ function CheckoutForm() {
   const [focusField, setFocusField] = useState<string | null>(null);
 
   const stripeFieldStyle = (field: string) => ({
-    background: "rgba(255,255,255,0.04)",
-    border: `1px solid ${focusField === field ? "rgba(124,92,252,0.6)" : "rgba(255,255,255,0.1)"}`,
+    background: "var(--bg-card)",
+    border: `1px solid ${focusField === field ? "rgba(124,92,252,0.6)" : "var(--border)"}`,
     borderRadius: "12px",
     padding: "14px 16px",
     transition: "border-color 0.2s, box-shadow 0.2s",
@@ -143,15 +143,15 @@ function CheckoutForm() {
           style={{
             fontSize: "32px",
             fontWeight: 800,
-            color: "#f0f0ff",
+            color: "var(--text-primary)",
             letterSpacing: "-0.04em",
           }}
         >
           Order Confirmed! 🎉
         </h2>
-        <p style={{ color: "#a0a0b8", fontSize: "16px" }}>
+        <p style={{ color: "var(--text-secondary)", fontSize: "16px" }}>
           Thank you for your purchase. A confirmation will be sent to{" "}
-          <strong style={{ color: "#f0f0ff" }}>{email}</strong>.
+          <strong style={{ color: "var(--text-primary)" }}>{email}</strong>.
         </p>
         <Link
           href="/"
@@ -188,8 +188,8 @@ function CheckoutForm() {
           {/* Contact */}
           <div
             style={{
-              background: "#16161f",
-              border: "1px solid rgba(255,255,255,0.07)",
+              background: "var(--bg-card)",
+              border: "1px solid var(--border)",
               borderRadius: "20px",
               padding: "28px",
               marginBottom: "20px",
@@ -199,7 +199,7 @@ function CheckoutForm() {
               style={{
                 fontSize: "17px",
                 fontWeight: 700,
-                color: "#f0f0ff",
+                color: "var(--text-primary)",
                 marginBottom: "20px",
                 display: "flex",
                 alignItems: "center",
@@ -231,7 +231,7 @@ function CheckoutForm() {
                     display: "block",
                     fontSize: "12px",
                     fontWeight: 600,
-                    color: "#a0a0b8",
+                    color: "var(--text-secondary)",
                     marginBottom: "6px",
                     textTransform: "uppercase",
                     letterSpacing: "0.06em",
@@ -248,11 +248,11 @@ function CheckoutForm() {
                   required
                   style={{
                     width: "100%",
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--border)",
                     borderRadius: "12px",
                     padding: "14px 16px",
-                    color: "#f0f0ff",
+                    color: "var(--text-primary)",
                     fontSize: "15px",
                     outline: "none",
                     transition: "border-color 0.2s",
@@ -263,7 +263,7 @@ function CheckoutForm() {
                   }
                   onBlur={(e) =>
                   ((e.target as HTMLInputElement).style.borderColor =
-                    "rgba(255,255,255,0.1)")
+                    "var(--border)")
                   }
                 />
               </div>
@@ -273,7 +273,7 @@ function CheckoutForm() {
                     display: "block",
                     fontSize: "12px",
                     fontWeight: 600,
-                    color: "#a0a0b8",
+                    color: "var(--text-secondary)",
                     marginBottom: "6px",
                     textTransform: "uppercase",
                     letterSpacing: "0.06em",
@@ -290,11 +290,11 @@ function CheckoutForm() {
                   required
                   style={{
                     width: "100%",
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--border)",
                     borderRadius: "12px",
                     padding: "14px 16px",
-                    color: "#f0f0ff",
+                    color: "var(--text-primary)",
                     fontSize: "15px",
                     outline: "none",
                     transition: "border-color 0.2s",
@@ -305,7 +305,7 @@ function CheckoutForm() {
                   }
                   onBlur={(e) =>
                   ((e.target as HTMLInputElement).style.borderColor =
-                    "rgba(255,255,255,0.1)")
+                    "var(--border)")
                   }
                 />
               </div>
@@ -315,8 +315,8 @@ function CheckoutForm() {
           {/* Payment */}
           <div
             style={{
-              background: "#16161f",
-              border: "1px solid rgba(255,255,255,0.07)",
+              background: "var(--bg-card)",
+              border: "1px solid var(--border)",
               borderRadius: "20px",
               padding: "28px",
               marginBottom: "20px",
@@ -326,7 +326,7 @@ function CheckoutForm() {
               style={{
                 fontSize: "17px",
                 fontWeight: 700,
-                color: "#f0f0ff",
+                color: "var(--text-primary)",
                 marginBottom: "20px",
                 display: "flex",
                 alignItems: "center",
@@ -386,7 +386,7 @@ function CheckoutForm() {
                     display: "block",
                     fontSize: "12px",
                     fontWeight: 600,
-                    color: "#a0a0b8",
+                    color: "var(--text-secondary)",
                     marginBottom: "6px",
                     textTransform: "uppercase",
                     letterSpacing: "0.06em",
@@ -409,7 +409,7 @@ function CheckoutForm() {
                       display: "block",
                       fontSize: "12px",
                       fontWeight: 600,
-                      color: "#a0a0b8",
+                      color: "var(--text-secondary)",
                       marginBottom: "6px",
                       textTransform: "uppercase",
                       letterSpacing: "0.06em",
@@ -431,7 +431,7 @@ function CheckoutForm() {
                       display: "block",
                       fontSize: "12px",
                       fontWeight: 600,
-                      color: "#a0a0b8",
+                      color: "var(--text-secondary)",
                       marginBottom: "6px",
                       textTransform: "uppercase",
                       letterSpacing: "0.06em",
@@ -508,7 +508,7 @@ function CheckoutForm() {
               marginTop: "12px",
               textAlign: "center",
               fontSize: "12px",
-              color: "#606078",
+              color: "var(--text-muted)",
             }}
           >
             🔒 256-bit SSL encrypted · Powered by Stripe
@@ -518,8 +518,8 @@ function CheckoutForm() {
         {/* ── RIGHT: Order Summary ── */}
         <div
           style={{
-            background: "#16161f",
-            border: "1px solid rgba(255,255,255,0.07)",
+            background: "var(--bg-card)",
+            border: "1px solid var(--border)",
             borderRadius: "20px",
             padding: "28px",
             position: "sticky",
@@ -530,7 +530,7 @@ function CheckoutForm() {
             style={{
               fontSize: "17px",
               fontWeight: 700,
-              color: "#f0f0ff",
+              color: "var(--text-primary)",
               marginBottom: "20px",
             }}
           >
@@ -538,7 +538,7 @@ function CheckoutForm() {
           </h2>
 
           {items.length === 0 ? (
-            <p style={{ color: "#606078", fontSize: "14px" }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "14px" }}>
               Your cart is empty.{" "}
               <Link href="/" style={{ color: "#7c5cfc" }}>
                 Go shopping
@@ -558,7 +558,7 @@ function CheckoutForm() {
                         height: "56px",
                         borderRadius: "10px",
                         overflow: "hidden",
-                        background: "rgba(255,255,255,0.06)",
+                        background: "var(--bg-secondary)",
                         position: "relative",
                         flexShrink: 0,
                       }}
@@ -572,7 +572,7 @@ function CheckoutForm() {
                         style={{
                           fontSize: "14px",
                           fontWeight: 600,
-                          color: "#f0f0ff",
+                          color: "var(--text-primary)",
                           overflow: "hidden",
                           textOverflow: "ellipsis",
                           whiteSpace: "nowrap",
@@ -581,7 +581,7 @@ function CheckoutForm() {
                         {item.name}
                       </p>
                       {item.size && (
-                        <p style={{ fontSize: "12px", color: "#606078" }}>
+                        <p style={{ fontSize: "12px", color: "var(--text-muted)" }}>
                           Size: {item.size} · Qty: {item.quantity}
                         </p>
                       )}
@@ -593,26 +593,26 @@ function CheckoutForm() {
                 ))}
               </div>
 
-              <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "16px" }}>
+              <div style={{ borderTop: "1px solid var(--border)", paddingTop: "16px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px" }}>
-                  <span style={{ fontSize: "14px", color: "#a0a0b8" }}>Subtotal</span>
-                  <span style={{ fontSize: "14px", color: "#f0f0ff" }}>
+                  <span style={{ fontSize: "14px", color: "var(--text-secondary)" }}>Subtotal</span>
+                  <span style={{ fontSize: "14px", color: "var(--text-primary)" }}>
                     {currency} {totalPrice.toFixed(2)}
                   </span>
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "16px" }}>
-                  <span style={{ fontSize: "14px", color: "#a0a0b8" }}>Shipping</span>
+                  <span style={{ fontSize: "14px", color: "var(--text-secondary)" }}>Shipping</span>
                   <span style={{ fontSize: "14px", color: "#22c55e" }}>Free</span>
                 </div>
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    borderTop: "1px solid rgba(255,255,255,0.07)",
+                    borderTop: "1px solid var(--border)",
                     paddingTop: "14px",
                   }}
                 >
-                  <span style={{ fontSize: "16px", fontWeight: 700, color: "#f0f0ff" }}>
+                  <span style={{ fontSize: "16px", fontWeight: 700, color: "var(--text-primary)" }}>
                     Total
                   </span>
                   <span
@@ -640,7 +640,7 @@ function CheckoutForm() {
             grid-template-columns: 1fr !important;
           }
         }
-        input::placeholder { color: #606078; }
+        input::placeholder { color: var(--text-muted); }
         input { font-family: 'Inter', sans-serif; }
       `}</style>
     </form>
@@ -654,7 +654,7 @@ export default function CheckoutPage() {
       style={{
         minHeight: "100vh",
         background:
-          "radial-gradient(ellipse 50% 40% at 50% 0%, rgba(124,92,252,0.1) 0%, transparent 60%), #0a0a0f",
+          "radial-gradient(ellipse 50% 40% at 50% 0%, var(--accent-light) 0%, transparent 60%), var(--bg-primary)",
         padding: "60px 24px 100px",
       }}
     >
@@ -666,7 +666,7 @@ export default function CheckoutPage() {
             display: "inline-flex",
             alignItems: "center",
             gap: "6px",
-            color: "#a0a0b8",
+            color: "var(--text-secondary)",
             textDecoration: "none",
             fontSize: "14px",
             fontWeight: 500,
@@ -683,14 +683,14 @@ export default function CheckoutPage() {
             style={{
               fontSize: "clamp(28px, 4vw, 42px)",
               fontWeight: 900,
-              color: "#f0f0ff",
+              color: "var(--text-primary)",
               letterSpacing: "-0.04em",
               marginBottom: "6px",
             }}
           >
             Checkout
           </h1>
-          <p style={{ color: "#606078", fontSize: "14px" }}>
+          <p style={{ color: "var(--text-muted)", fontSize: "14px" }}>
             Complete your purchase securely
           </p>
         </div>

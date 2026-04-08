@@ -14,19 +14,23 @@ export const metadata = {
   },
 };
 
+import { ThemeProvider } from "./components/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </CartProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <CartProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

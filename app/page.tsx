@@ -17,7 +17,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className="relative overflow-hidden pt-24 pb-20 lg:pt-32 lg:pb-32 noise min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden pt-24 pb-20 lg:pt-32 lg:pb-32 noise min-h-[90vh] flex items-center justify-center">
         {/* Background glow effects */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7c5cfc] opacity-20 blur-[120px]"></div>
@@ -33,7 +33,7 @@ export default async function Home() {
                 ✦ New Arrivals
               </div>
               <h1 className="text-5xl lg:text-[72px] font-extrabold leading-[1.05] text-[var(--text-primary)] tracking-tight">
-                Elevate Your <br /> 
+                Elevate Your <br />
                 <span className="gradient-text">Every Step</span>
               </h1>
               <p className="mt-8 max-w-xl text-lg text-[var(--text-secondary)] leading-relaxed">
@@ -57,7 +57,7 @@ export default async function Home() {
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105 opacity-90 dark:mix-blend-lighten"
                 />
-                
+
                 {/* Decorative Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-transparent opacity-80 pointer-events-none"></div>
 
